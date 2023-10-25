@@ -1,0 +1,20 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <div class="content-header">
+        <h1>Groupes</h1>
+        <a class="create-band-button" href="{% url 'band-create' %}" style="background-color: #007bff; color: #fff; padding: 10px 15px; border: none; border-radius: 5px; text-decoration: none; font-weight: bold;">Créer Groupe</a>
+    </div>
+    
+    <ul class="band-list" style="list-style-type: none; padding: 0;">
+        {% for band in bands %}
+            <li class="band-item" style="margin-bottom: 10px; background-color: #fff; border: 1px solid #e1e1e1; border-radius: 5px; padding: 15px; display: flex;  justify-content: space-between; align-items: center;">
+                <a href="{% url 'band-detail' band.id %}" class="band-link" style="text-decoration: none; color: #333; font-weight: bold;">{{ band.name }}</a>
+                <span class="band-actions">
+                    <a href="{% url 'band-change' band.id %}">Modifier</a>
+                    <a href="{% url 'band-delete' band.id %}">Supprimer</a>
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

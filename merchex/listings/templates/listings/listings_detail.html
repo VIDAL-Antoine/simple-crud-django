@@ -1,0 +1,15 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <div class="listing-details" style="background-color: #f5f5f5; padding: 20px; border: 1px solid #e1e1e1; border-radius: 5px; margin: 20px;">
+        <h2>{{listing.title}}</h2>
+        <ul class="listing-info" style="list-style-type: none; padding: 0;">
+            <li>Description: {{listing.description}}</li>
+            <li>En vente: {{listing.isSold|yesno:"oui,non"}}</li>
+            <li>Année: {{listing.year}}</li>
+            <li>Type: {{listing.type}}</li>
+        </ul>
+        <a href="{% url 'listing-list' %}" class="return-link" style="display: block; margin-top: 20px; text-decoration: none; color: #007bff;">Retour à tous les Listings</a>
+    </div>
+{% endblock %}
+

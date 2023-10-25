@@ -1,0 +1,20 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <div class="content-header">
+        <h1>Listings</h1>
+        <a class="create-listing-button" href="{% url 'listing-create' %}" style="background-color: #007bff; color: #fff; padding: 10px 15px; border: none; border-radius: 5px; text-decoration: none; font-weight: bold;">Créer Listing</a>
+    </div>
+
+    <ul class="listing-list" style="list-style-type: none; padding: 0;">
+        {% for listing in listings %}
+            <li class="listing-item" style="margin-bottom: 10px; background-color: #fff; border: 1px solid #e1e1e1; border-radius: 5px; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+                <a href="{% url 'listing-detail' listing.id %}" class="listing-link" style="text-decoration: none; color: #333; font-weight: bold;">{{ listing.title }}</a>
+                <span class="listing-actions">
+                    <a href="{% url 'listing-change' listing.id %}">Modifier</a>
+                    <a href="{% url 'listing-delete' listing.id %}">Supprimer</a>
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
