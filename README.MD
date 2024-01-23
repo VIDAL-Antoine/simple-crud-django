@@ -1,16 +1,17 @@
 # Simple CRUD Django
 
-Cette application est un simple CRUD fait en Django. Pour la partie Django le code est inspiré par [Débutez avec le framework Django](https://openclassrooms.com/fr/courses/7172076-debutez-avec-le-framework-django). Il y a divers ajouts comme le CSS ou les termes qui ont été changés.
+⚠️ The text / UI of the application is only available in French ⚠️
 
-## Lancement de l'application
+This application is a simple CRUD made in Django. For the Django part, the code is inspired by [Débutez avec le framework Django](https://openclassrooms.com/fr/courses/7172076-debutez-avec-le-framework-django). There are various additions such as CSS or terms that have been changed.
 
-- Télécharger avec par exemple `git clone`
-- Installez les packages avec `pip install -r requirements.txt`
-- Allez dans le répertoire de l'application avec `cd merchex`
-- Lancer avec `python manage.py runserver`
-- L'application est disponible sur `http://127.0.0.1:8000`
+## Launching the application
+
+- Download with `git clone`.
+- Install packages with `pip install -r requirements.txt`.
+- Go to the application directory with `cd merchex`.
+- Run with `python manage.py runserver`.
+- The application is available at `http://127.0.0.1:8000`
  
+## How the application works
 
-## Fonctionnement de l'application
-
-Il s'agit d'une simple interface où l'on peut faire ce que l'on appelle un CRUD (Create, Read, Update, Delete). Ici cela est possible sur deux entités : les groupes (de musiques) et les listings. Les listings ont besoin d'un groupe pour exister, la fonctionnalité de clé étrangère a donc été également été testée.
+This is a simple interface where you can perform what's known as a CRUD (Create, Read, Update, Delete). Here, this is possible on two entities: groups (of music) and listings. Listings need a group to exist, so the foreign key functionality has also been tested.
